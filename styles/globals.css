@@ -1,84 +1,114 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.navigationbar{
-  background-color: rgb(64, 146, 128);
+
+body {
+  position: relative;
 }
-.nav{
+
+.navigationbar {
+  background-color: rgb(84, 150, 136);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.logo{
+
+.logo {
   font-family: 'Franklin Gothic Medium', Arial, sans-serif;
   letter-spacing: 1px;
 }
-.menuicon{
+
+.menuicon {
   display: none;
 }
-.menuitems{
+
+.menuitems {
   list-style: none;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menuitems .link{
+
+.menuitems .link {
   text-decoration: none;
   color: white;
-  margin: 0px 10px;
+  margin: 0px 20px;
   cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  transform: scale(1);
+  transition: all 1s;
+  font-weight: 300;
 }
-.menuitems li:hover{
+.menuitems .link:hover {
   color: rgb(219, 240, 235);
+  transform: scale(1.5);
 }
-.socialitems{
+
+.socialitems {
   list-style: none;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.socialitems .link{
-  margin: 0px 5px; 
+
+.socialitems .link {
+  margin: 0px 5px;
   cursor: pointer;
   text-decoration: none;
   color: white;
 }
-.socialitems .link:hover{
+
+.socialitems .link:hover {
   color: rgb(219, 240, 235);
 }
 
-.social{
+.social {
   list-style: none;
   margin: 20px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social li{
+
+.social li {
   margin: 0px 5px;
   cursor: pointer;
   color: rgb(94, 153, 140);
 }
-.social li:hover{
+
+.social li:hover {
   color: rgba(87, 86, 86, 0.658);
 }
 
-.hero{
-  width: 100%;
-  height: 90vh;
+.hero {
+  width: calc(100% - 8%);
+  height: 70vh;
+  margin: 0px 4%;
+  margin-top: 25px;
   background-image: url('https://education.ec.europa.eu/sites/default/files/styles/eac_ratio_16_9_xl/public/2022-10/quality-education-1200x675.jpg?h=c74750f6&itok=DakmxJRp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.9;
+  border-radius: 5px;
   position: relative;
+  -webkit-box-shadow: 0 0 10px gray;
+        box-shadow: 0 0 10px gray;
 }
-.hero .content{
+
+.hero .content {
   position: absolute;
   top: 20%;
   right: 8%;
@@ -86,7 +116,8 @@
   color: rgb(245, 245, 245);
   text-shadow: 3px 3px 3px #525151;
 }
-.card-container{
+
+.card-container {
   width: 100%;
   padding: 30px;
   display: flex;
@@ -94,23 +125,29 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-} 
-.card{
+}
+
+.card {
   cursor: pointer;
   transition: all 1s;
-} 
-.card:hover{
+  -webkit-box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px gray;
+}
+
+.card:hover {
   transform: scale(1.04);
 
 }
-.about{
+
+.about {
   padding: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
-.picture{
+
+.picture {
   width: 300px;
   /* border: 1px solid rgb(177, 176, 176); */
   border-radius: 5px;
@@ -121,63 +158,79 @@
   justify-content: center;
   align-items: center;
 }
-.picture img{
+
+.picture img {
   width: 100%;
 }
-.about .content{
+
+.about .content {
   width: 700px;
   margin: 10px;
   padding: 20px;
 }
-.footer{
+
+.footer {
   width: 100%;
-  background-color: rgb(64, 146, 128);
+  background-color: rgb(84, 150, 136);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 0px;
   color: rgb(241, 241, 241);
+  font-family:   Geneva, Verdana, sans-serif !important;
+  font-size: 18px;
 }
-.f-social{
+
+.f-social {
   list-style: none;
   margin: 20px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.f-social .link{
+
+.f-social .link {
   margin: 0px 10px;
   /* text-decoration: none; */
   cursor: pointer;
   color: rgb(241, 241, 241);
   transition: all .5s;
 }
-.f-social .link:hover{
- color: rgb(202, 212, 210);
- /* transform: scale(1.5); */
+
+.f-social .link:hover {
+  color: rgb(202, 212, 210);
+  /* transform: scale(1.5); */
 }
-@media (width < 1100px){
-  .about .content{
+
+@media (width < 1100px) {
+  .about .content {
     width: 500px;
   }
 }
-@media (width < 890px){
-  .about .content{
+
+@media (width < 890px) {
+  .about .content {
     width: 700px;
   }
 }
+
 @media (width < 600px) {
-  .menuicon{
+  .menuicon {
     display: block;
   }
-  .menuitems{
+
+  .menuitems {
     display: none
   }
-  .socialitems{
+
+  .socialitems {
     display: none
-    }
-    .hero .content{
-      font-size: 45px;
-    }
+  }
+
+  .hero .content {
+    font-size: 45px;
+    right: 0;
+    left: 20px;
+  }
 }
